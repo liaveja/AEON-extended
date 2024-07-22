@@ -14,18 +14,20 @@
      xmlns:swrl="http://www.w3.org/2003/11/swrl#"
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:terms="http://purl.org/dc/terms/"
-     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#"
+     xmlns:Eventcalendar="https://eventcalendar.semantic-cora.org/index.php/">
     <owl:Ontology rdf:about="http://purl.obolibrary.org/obo/aeon.owl">
         <owl:versionIRI rdf:resource="http://purl.obolibrary.org/obo/aeon/releases/2022-11-25/aeon.owl"/>
         <dc:contributor>Christian Hauschke</dc:contributor>
         <dc:contributor>Christoph Lange</dc:contributor>
+        <dc:contributor>Cornelia Veja</dc:contributor>
         <dc:contributor>Michael Conlon</dc:contributor>
         <dc:creator>Philip Strömert</dc:creator>
         <terms:description>_WIP - NOT READY FOR PRODUCTION_ The Academic Event Ontology (AEON) is used to represent information regarding academic events. The ontology supports the identification, development, management, evaluation, and impact assessment of events, components of events and event series, as well as identification and reuse of works presented or developed at events. The ontology is independent of knowledge, creative domain, or topics related to events. AEON is focused on events and assumes the representation of many entities associated with events such as attendees, locations, academic works, datetimes, and processes are defined in compatible ontologies.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:title>Academic Event Ontology</terms:title>
         <rdfs:comment>AEON is being developed as a part of the ConfIDent project (https://projects.tib.eu/confident).</rdfs:comment>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string">2022-11-25</owl:versionInfo>
+        <owl:versionInfo>2022-11-25</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -44,9 +46,9 @@
     <!-- http://purl.obolibrary.org/obo/AEON_0000026 -->
 
     <owl:AnnotationProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000026">
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Philip Strömert</obo:IAO_0000117>
+        <obo:IAO_0000117>Philip Strömert</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-14T15:31:27Z</dc:date>
-        <rdfs:label xml:lang="de">maps to</rdfs:label>
+        <rdfs:label xml:lang="en">maps to</rdfs:label>
     </owl:AnnotationProperty>
     
 
@@ -656,7 +658,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/AEON_0000027"/>
         <obo:IAO_0000115 xml:lang="en">A relation obtaining between an &apos;academic event&apos; and an academic field descriptor that is used to describe the scientific subject of the planned process according to some controlled vocabulary or thesaurus.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">has academic field descriptor</rdfs:label>
+        <rdfs:label xml:lang="en">has event field descriptor</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -696,11 +698,11 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000060"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
-        <obo:IAO_0000115 xml:lang="en">see inverse relation &apos;has deadline</obo:IAO_0000115>
+        <obo:IAO_0000115 xml:lang="en">see inverse relation &apos;has deadline&apos;.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Given the fact that deadlines are specified in various planned processes this term should probably be regarded as a placeholder which ought to be defined in a broader ontology, maybe something like IAO?</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-07-19T11:29:50Z</dc:date>
-        <rdfs:label xml:lang="de">specifies deadline of</rdfs:label>
+        <rdfs:label xml:lang="en">specifies deadline of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -713,9 +715,9 @@ We also have the outstanding issue of how to aim different definitions to differ
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">a relation between a planned process and a deadline specification</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Given the fact that deadlines are specified in various planned processes this term should probably be regarded as a placeholder which ought to be defined in a broader ontology, maybe something like IAO?</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-07-19T11:30:01Z</dc:date>
-        <rdfs:label xml:lang="de">has deadline</rdfs:label>
+        <rdfs:label xml:lang="en">has deadline</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -741,7 +743,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/AEON_0000017"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P227&quot;, &quot;label&quot;: &quot;GND_ID&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#gndIdentifier&quot;, &quot;label&quot;: &quot;GND-Identifier&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P227&quot;, &quot;label&quot;: &quot;GND_ID&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#gndIdentifier&quot;, &quot;label&quot;: &quot;GND-Identifier&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000115 xml:lang="en">A relation obtaining between an entity and the &apos;GND identifier&apos; used by the German national library to denote this entity.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
@@ -810,7 +812,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000235"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/AEON_0000021"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: null, &quot;label&quot;: &quot;itemID&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Wikidataid&quot;, &quot;label&quot;: &quot;Wikidataid&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: null, &quot;label&quot;: &quot;itemID&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Wikidataid&quot;, &quot;label&quot;: &quot;Wikidataid&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000115 xml:lang="en">A relation obtaining between an entity and the Wikidata identifier used to denote this entity in the Wikidata database.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
@@ -871,7 +873,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0002012"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000196"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/AEON_0000197"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P179&quot;, &quot;label&quot;: &quot;part_of_the_seriesLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Event_in_series&quot;, &quot;label&quot;: &quot;Event_in_series&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P179&quot;, &quot;label&quot;: &quot;part_of_the_seriesLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Event_in_series&quot;, &quot;label&quot;: &quot;Event_in_series&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000115 xml:lang="en">A relation obtaining between an academic event and an academic event series. It is used to express that the academic event is part of a specific event series.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">part of event series</rdfs:label>
@@ -900,7 +902,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P17&quot;, &quot;label&quot;: &quot;countryLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Has_location_country&quot;, &quot;label&quot;: &quot;Has_location_country&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P17&quot;, &quot;label&quot;: &quot;countryLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Has_location_country&quot;, &quot;label&quot;: &quot;Has_location_country&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000115 xml:lang="en">A relation obtaining between a bfo:occurent and the country in which it occurs.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">occurs in country</rdfs:label>
@@ -916,7 +918,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P276&quot;, &quot;label&quot;: &quot;locationLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Has_location_city&quot;, &quot;label&quot;: &quot;Has_location_city&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#placeOfConferenceOrEvent&quot;, &quot;label&quot;: &quot;Place of conference or event&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P276&quot;, &quot;label&quot;: &quot;locationLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Has_location_city&quot;, &quot;label&quot;: &quot;Has_location_city&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#placeOfConferenceOrEvent&quot;, &quot;label&quot;: &quot;Place of conference or event&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000115 xml:lang="en">A relation obtaining between a bfo:occurent and the city in which it occurs.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">occurs in city</rdfs:label>
@@ -932,7 +934,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000066"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000005"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P131&quot;, &quot;label&quot;: &quot;located_in_the_administrative_territorial_entityLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Has_location_state&quot;, &quot;label&quot;: &quot;Has_location_state&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P131&quot;, &quot;label&quot;: &quot;located_in_the_administrative_territorial_entityLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Has_location_state&quot;, &quot;label&quot;: &quot;Has_location_state&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000115 xml:lang="en">A relation obtaining between a bfo:occurent and the province in which it occurs.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">occurs in province</rdfs:label>
@@ -969,7 +971,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         </rdfs:range>
         <obo:IAO_0000115 xml:lang="en">see also inverse property: A relation obtaining between an &apos;academic field descriptor&apos; and a obi:&apos;planned process&apos;, in which the former is used to descibe the scientific subject of the latter according to some controlled vocabulary or thesaurus.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
-        <rdfs:label xml:lang="en">describes academic field of</rdfs:label>
+        <rdfs:label xml:lang="en">describes event field of</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -1024,7 +1026,7 @@ We also have the outstanding issue of how to aim different definitions to differ
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000030"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000115 xml:lang="en">A relation obtaining between an &apos;event fee specification&apos; and a obi:&apos;planned process&apos;.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-06-28T12:48:49Z</dc:date>
         <rdfs:label xml:lang="en">specifies event fee of</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/117"/>
@@ -1320,11 +1322,6 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <!-- http://purl.obolibrary.org/obo/OBI_0000312 -->
 
     <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0000312">
-        <owl:equivalentProperty>
-            <rdf:Description>
-                <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0000299"/>
-            </rdf:Description>
-        </owl:equivalentProperty>
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/RO_0000056"/>
         <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <obo:IAO_0000111>is_specified_output_of</obo:IAO_0000111>
@@ -1833,39 +1830,6 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/AEON:0000901 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/AEON:0000901">
-        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
-        <owl:inverseOf rdf:resource="http://purl.obolibrary.org/obo/AEON:0000902"/>
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON:0000805"/>
-        <rdfs:range>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000011"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:range>
-        <obo:IAO_0000115>&quot;see also inverse property: A relation obtaining between an &apos;practical field descriptor&apos; and a obi:&apos;planned process&apos;, in which the former is used to descibe the practical subject of the latter according to some controlled vocabulary or thesaurus.&quot;@en</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-08T10:23:57Z</dc:date>
-        <rdfs:label>describes practical field of</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/AEON:0000902 -->
-
-    <owl:ObjectProperty rdf:about="http://purl.obolibrary.org/obo/AEON:0000902">
-        <obo:IAO_0000115>&quot;A relation obtaining between an &apos;practical event&apos; and an practical field descriptor that is used to describe the practical subject of the planned process according to some controlled vocabulary or thesaurus.&quot;@en</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-08T11:54:09Z</dc:date>
-        <rdfs:label>has practical field descriptor</rdfs:label>
-    </owl:ObjectProperty>
-    
-
-
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -1885,7 +1849,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">A data property which is intended to be used for the literal representation of a deadline specification in the xsd:dateTimeStamp format</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-07-19T13:49:58Z</dc:date>
         <rdfs:label xml:lang="en">deadline datetime value</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
@@ -1901,7 +1865,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">A shortend representation of a planned process name that has been formed from the initial components of a planned process name representation, usually using individual initial letters.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-13T08:55:02Z</dc:date>
         <rdfs:label xml:lang="en">planned process acronym</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/132"/>
@@ -1914,7 +1878,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000140">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000196"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;crossref&quot;: {&quot;api_proceedings_endpoint_uri&quot;: &quot;https://api.crossref.org/types/proceedings/works?select=event&quot;, &quot;json_api_key&quot;: {&quot;event&quot;: &quot;number&quot;}}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;crossref&quot;: {&quot;api_proceedings_endpoint_uri&quot;: &quot;https://api.crossref.org/types/proceedings/works?select=event&quot;, &quot;json_api_key&quot;: {&quot;event&quot;: &quot;number&quot;}}}</obo:AEON_0000026>
         <obo:IAO_0000115>The ordinal number of an academic event, if it is a part of an event series.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">event number</rdfs:label>
     </owl:DatatypeProperty>
@@ -1926,7 +1890,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000141">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000196"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P582&quot;, &quot;label&quot;: &quot;end_time&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:End_date&quot;, &quot;label&quot;: &quot;End_date&quot;},&quot;crossref&quot;: {&quot;api_proceedings_endpoint_uri&quot;: &quot;https://api.crossref.org/types/proceedings/works?select=event&quot;, &quot;json_api_key&quot;: {&quot;event&quot;: &quot;end&quot;}}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P582&quot;, &quot;label&quot;: &quot;end_time&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:End_date&quot;, &quot;label&quot;: &quot;End_date&quot;},&quot;crossref&quot;: {&quot;api_proceedings_endpoint_uri&quot;: &quot;https://api.crossref.org/types/proceedings/works?select=event&quot;, &quot;json_api_key&quot;: {&quot;event&quot;: &quot;end&quot;}}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">A data property to provide the planned end date of an organized sociocultural event in the xsd:dateTimeStamp format.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
@@ -1941,7 +1905,7 @@ every c that is a concretization of g specifically denotes r</obo:IAO_0000116>
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000142">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000196"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P580&quot;, &quot;label&quot;: &quot;start_time&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Start_date&quot;, &quot;label&quot;: &quot;Start_date&quot;},&quot;crossref&quot;: {&quot;api_proceedings_endpoint_uri&quot;: &quot;https://api.crossref.org/types/proceedings/works?select=event&quot;, &quot;json_api_key&quot;: {&quot;event&quot;: &quot;start&quot;}}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P580&quot;, &quot;label&quot;: &quot;start_time&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Start_date&quot;, &quot;label&quot;: &quot;Start_date&quot;},&quot;crossref&quot;: {&quot;api_proceedings_endpoint_uri&quot;: &quot;https://api.crossref.org/types/proceedings/works?select=event&quot;, &quot;json_api_key&quot;: {&quot;event&quot;: &quot;start&quot;}}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">A data property to provide the planned end date of  an organized sociocultural event in the xsd:dateTimeStamp format.</obo:IAO_0000115>
         <obo:IAO_0000117 xml:lang="en">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
@@ -2047,7 +2011,7 @@ For now it seems sufficient to have a data property.</obo:IAO_0000116>
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000149">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000128"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P2257&quot;, &quot;label&quot;: &quot;event_interval_inmonths&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P2257&quot;, &quot;label&quot;: &quot;event_interval_inmonths&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000115>An data property that provides the literal value of the timespan until the next event in a series takes place.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">event frequency</rdfs:label>
@@ -2155,7 +2119,7 @@ cancled → withdrawn</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000154">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000196"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P2936&quot;, &quot;label&quot;: &quot;language_usedLabel&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P2936&quot;, &quot;label&quot;: &quot;language_usedLabel&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000115 xml:lang="en">This data property should be used to provide the language that is officially spoken at an event. Its xsd:string range should preferrably be encoded in the ISO 639-1 standard (e.g. German would be &quot;de&quot;).</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">It needs to be discussed, if a data property is sufficient for our use case, or if it might be better to model the officially spoken language of an academic event as a generically dependent continuant that participates in this planned process as sugessted by the developers of the language ontology (https://github.com/vivo-ontologies/language-ontology/wiki/Usage).</obo:IAO_0000116>
@@ -2185,7 +2149,7 @@ cancled → withdrawn</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000157">
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <obo:IAO_0000115 xml:lang="en">A data property to provide the meeting link to a virtual event.</obo:IAO_0000115>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">not needed at the moment, but might be reactivated if needed</obo:IAO_0000116>
+        <obo:IAO_0000116>not needed at the moment, but might be reactivated if needed</obo:IAO_0000116>
         <rdfs:label xml:lang="en">obsolete_meeting URL</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
@@ -2209,7 +2173,7 @@ cancled → withdrawn</rdfs:comment>
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000159">
         <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000158"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Attendees&quot;, &quot;label&quot;: &quot;Attendees&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Attendees&quot;, &quot;label&quot;: &quot;Attendees&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000115 xml:lang="en">An academic event metric that provides a literal value for the number of attendees of an academic event.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">number of attendess</rdfs:label>
@@ -2274,7 +2238,7 @@ cancled → withdrawn</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000164">
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000011"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P856&quot;, &quot;label&quot;: &quot;official_website&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Homepage&quot;, &quot;label&quot;: &quot;Homepage&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P856&quot;, &quot;label&quot;: &quot;official_website&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Property:Homepage&quot;, &quot;label&quot;: &quot;Homepage&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">A data property that provides the official website of a planned process.</obo:IAO_0000115>
         <rdfs:label xml:lang="en">event website</rdfs:label>
@@ -2316,10 +2280,10 @@ cancled → withdrawn</rdfs:comment>
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000168">
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000001"/>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P2047&quot;, &quot;label&quot;: &quot;duration&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#dateOfConferenceOrEvent&quot;, &quot;label&quot;: &quot;Date of conference or event&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Property:P2047&quot;, &quot;label&quot;: &quot;duration&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#dateOfConferenceOrEvent&quot;, &quot;label&quot;: &quot;Date of conference or event&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <obo:IAO_0000115 xml:lang="en">A data property that assigns a time duration to an academic event.</obo:IAO_0000115>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">not needed, as it could be calculated from the start and end data properties</obo:IAO_0000116>
+        <obo:IAO_0000116>not needed, as it could be calculated from the start and end data properties</obo:IAO_0000116>
         <rdfs:label xml:lang="en">obsolete_duration</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:DatatypeProperty>
@@ -2390,11 +2354,12 @@ cancled → withdrawn</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/AEON_0000952 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000952">
-        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000196"/>
+        <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/OBI_0002815"/>
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000224"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <obo:IAO_0000115>Describes event using keywords.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-08T09:16:41Z</dc:date>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-10-08T09:16:41Z</dc:date>
         <rdfs:label>event keywords</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -2406,9 +2371,50 @@ cancled → withdrawn</rdfs:comment>
         <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000196"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <obo:IAO_0000115>The event relevance, by geographical coverage.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-08T11:09:15Z</dc:date>
         <rdfs:label>event relevance</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/AEON_0000954 -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/AEON_0000954">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/AEON_0000196"/>
+        <rdfs:range>
+            <rdfs:Datatype>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                        <rdf:first>BWW</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                <rdf:first>DGFE</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first>DIPF</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first>HBO</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdfs:Datatype>
+        </rdfs:range>
+        <obo:IAO_0000115>Describes groups of people, each of them belonging to a specific organization and that have special interest in the event.</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-04-04T13:11:03Z</dc:date>
+        <rdfs:label>event group of interest</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -2416,6 +2422,7 @@ cancled → withdrawn</rdfs:comment>
     <!-- http://purl.obolibrary.org/obo/OBI_0002815 -->
 
     <owl:DatatypeProperty rdf:about="http://purl.obolibrary.org/obo/OBI_0002815">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
         <obo:IAO_0000111 xml:lang="en">has representation</obo:IAO_0000111>
         <obo:IAO_0000112 xml:lang="en">12th arrondissement of Paris</obo:IAO_0000112>
         <obo:IAO_0000112>20g</obo:IAO_0000112>
@@ -2496,7 +2503,7 @@ cancled → withdrawn</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000224"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Q1656682&quot;, &quot;label&quot;: &quot;eventLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Category:Event&quot;, &quot;label&quot;: &quot;Event&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#ConferenceOrEvent&quot;, &quot;label&quot;: &quot;Conference or Event&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Q1656682&quot;, &quot;label&quot;: &quot;eventLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Category:Event&quot;, &quot;label&quot;: &quot;Event&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#ConferenceOrEvent&quot;, &quot;label&quot;: &quot;Conference or Event&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000112 xml:lang="en">The 19th International Semantic Web Conference (ISWC2020) is an academic  event.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">An organized sociocultural event that refers to a gathering of researchers (not necessarily academics) in which these researches have the chance to present and discuss their work and possible future collaborations, according to a certain sociocultural format that is specified more or less explicitly in the announcement of the academic event.</obo:IAO_0000115>
@@ -2547,7 +2554,7 @@ cancled → withdrawn</rdfs:comment>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:AEON_0000026 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Q15900647&quot;, &quot;label&quot;: &quot;conference_seriesLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Category:Event_series&quot;, &quot;label&quot;: &quot;Event_series&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#SeriesOfConferenceOrEvent&quot;, &quot;label&quot;: &quot;Series of conference or event&quot;}}</obo:AEON_0000026>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Q15900647&quot;, &quot;label&quot;: &quot;conference_seriesLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Category:Event_series&quot;, &quot;label&quot;: &quot;Event_series&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#SeriesOfConferenceOrEvent&quot;, &quot;label&quot;: &quot;Series of conference or event&quot;}}</obo:AEON_0000026>
         <obo:IAO_0000112>International Semantic Web Conference (ISWC)</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">An academic event that is the ordered set of all recurring academic events of a destinct identity. This destinct identity is usually demarked by a shared name that only differs with regard to some ordnial symbol, such as 1st or the year of the academic event.</obo:IAO_0000115>
@@ -2606,7 +2613,7 @@ cancled → withdrawn</rdfs:comment>
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/AEON_0000005">
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">The contributor role inheres in a person or organization that participates in a planned process by somehow contributing to it.</obo:IAO_0000115>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">usign CRO&apos;s contributor role instead</obo:IAO_0000116>
+        <obo:IAO_0000116>usign CRO&apos;s contributor role instead</obo:IAO_0000116>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000226"/>
         <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/CRO_0000000"/>
@@ -2658,7 +2665,7 @@ cancled → withdrawn</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000115 xml:lang="en">OBSOLETE An event organizer role that inheres in a person who is a member of an event committee and thus performs certain actions associated with the objectives/functions of that event committee.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">DEPRECATION REASON: This role is not needed, as the oostt:&quot;committee member role&quot; relation is sufficient enough.</rdfs:comment>
+        <rdfs:comment>DEPRECATION REASON: This role is not needed, as the oostt:&quot;committee member role&quot; relation is sufficient enough.</rdfs:comment>
         <rdfs:label xml:lang="en">deprecated_event committee member role</rdfs:label>
         <rdfs:seeAlso>https://github.com/tibonto/aeon/issues/144</rdfs:seeAlso>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
@@ -2761,7 +2768,7 @@ cancled → withdrawn</rdfs:comment>
         <obo:IAO_0000112>Someone who reviews a manuscript submitted for publication or presentation at an academic event bears a reviewer role.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000428"/>
         <obo:IAO_0000115 xml:lang="en">A role that inheres in a person who is designated to analyse and judge the information (e.g. text or code) that is the specified input of a particular reviewing process. This role is realized when the reviewing process has been completed as intended.</obo:IAO_0000115>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">The Contributor Role Ontology CRO contains a role that seems equivalent (http://purl.obolibrary.org/obo/CRO_0000101), but which cannot be used instead, as long as https://github.com/data2health/contributor-role-ontology/issues/135 is not sufficiently answered.</obo:IAO_0000116>
+        <obo:IAO_0000116>The Contributor Role Ontology CRO contains a role that seems equivalent (http://purl.obolibrary.org/obo/CRO_0000101), but which cannot be used instead, as long as https://github.com/data2health/contributor-role-ontology/issues/135 is not sufficiently answered.</obo:IAO_0000116>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">peer-review role</obo:IAO_0000118>
         <rdfs:label xml:lang="en">human reviewer role</rdfs:label>
@@ -2972,7 +2979,7 @@ cancled → withdrawn</rdfs:comment>
         <obo:IAO_0000118 xml:lang="en">Open Researcher and Contributor ID</obo:IAO_0000118>
         <obo:IAO_0000119 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://en.wikipedia.org/wiki/ORCID</obo:IAO_0000119>
         <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000708"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Term imported from Apollo_SV</rdfs:comment>
+        <rdfs:comment>Term imported from Apollo_SV</rdfs:comment>
         <rdfs:label>deprecated_ORCID</rdfs:label>
         <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
     </owl:Class>
@@ -3016,7 +3023,7 @@ cancled → withdrawn</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000228"/>
         <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">replaced by ENVO:00000856</rdfs:comment>
+        <rdfs:comment>replaced by ENVO:00000856</rdfs:comment>
         <rdfs:label xml:lang="en">deprecated_city</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/tibonto/aeon/issues/142</rdfs:seeAlso>
@@ -3031,7 +3038,7 @@ cancled → withdrawn</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000228"/>
         <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">replaced by ENVO term</rdfs:comment>
+        <rdfs:comment>replaced by ENVO term</rdfs:comment>
         <rdfs:label xml:lang="en">deprecated_country</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/tibonto/aeon/issues/142</rdfs:seeAlso>
@@ -3046,7 +3053,7 @@ cancled → withdrawn</rdfs:comment>
         <rdfs:subClassOf rdf:resource="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass"/>
         <obo:IAO_0000231 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000228"/>
         <obo:IAO_0100001 rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000005"/>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">replaced by ENVO term</rdfs:comment>
+        <rdfs:comment>replaced by ENVO term</rdfs:comment>
         <rdfs:label xml:lang="en">deprecated_province</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000005"/>
         <rdfs:seeAlso rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://github.com/tibonto/aeon/issues/142</rdfs:seeAlso>
@@ -3090,7 +3097,7 @@ cancled → withdrawn</rdfs:comment>
         <obo:IAO_0000115 xml:lang="en">A data item that contextualizes a obi:&apos;planned process&apos; or an iao:&apos;infornation content entity&apos; by providing a reference to a controlled vocalulary that codifies the subdevisions of knowledge taught and researched at the college or university level.</obo:IAO_0000115>
         <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">academic discipline category</obo:IAO_0000118>
-        <rdfs:label xml:lang="en">academic field descriptor</rdfs:label>
+        <rdfs:label xml:lang="en">event field descriptor</rdfs:label>
     </owl:Class>
     
 
@@ -3125,7 +3132,7 @@ cancled → withdrawn</rdfs:comment>
         <obo:IAO_0000112 xml:lang="en">The service Twitter provides is a virtual location, in which the Twitter users can communicate with each other in a mostly text-based mode.</obo:IAO_0000112>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000103"/>
         <obo:IAO_0000115 xml:lang="en">A realizable entity that provides a digital space for humans and computers to interact with one another in various digital modes (e.g. text, audio, video, tactile). It specifically depends on the IT infrastructure that is used to realize the virtual location in the planned process of running certain code on certain computers.</obo:IAO_0000115>
-        <obo:IAO_0000116 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">not needed at the moment, but might be reactivated, if needed</obo:IAO_0000116>
+        <obo:IAO_0000116>not needed at the moment, but might be reactivated, if needed</obo:IAO_0000116>
         <obo:IAO_0000117 rdf:resource="https://orcid.org/0000-0002-1595-3213"/>
         <obo:IAO_0000118 xml:lang="en">virtual site</obo:IAO_0000118>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2020-10-14T15:31:27Z</dc:date>
@@ -3220,7 +3227,7 @@ Event committees are usually formed in the planning process of social events, su
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">A conditional specification that, as part of a plan specification or an action specification, defines until when a specified action has to be carried out.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Given the fact that deadlines are specified in various planned processes this term should probably be regarded as a placeholder which ought to be defined in a broader ontology, maybe something like IAO?</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">deadline specification</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3233,7 +3240,7 @@ Event committees are usually formed in the planning process of social events, su
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000067"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">An abstract deadline is a submission deadline that, as part of a call for abstracts of an academic event, specifies the date until which a contribution to a planned process in form of an abstract has to be submitted.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">abstract deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3246,7 +3253,7 @@ Event committees are usually formed in the planning process of social events, su
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000067"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A camera-ready deadline is a submission deadline that, as part of a call for papers of an academic event, specifies the date until which a contribution to a planned process that is ready for publishing has to be submitted.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">camera-ready deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3259,8 +3266,8 @@ Event committees are usually formed in the planning process of social events, su
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000067"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A demo deadline is a submission deadline that, as part of a call for papers of an academic event, specifies the date until which a contribution to a planned process in form of a demonstration has to be submitted.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
-        <rdfs:label xml:lang="de">demo deadline</rdfs:label>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">demo deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
     
@@ -3273,7 +3280,7 @@ Event committees are usually formed in the planning process of social events, su
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">A deadline specification that specifies until when a participant of a planned process has to inform another participant of that process about something concering the plan of the process.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Given the fact that notification deadlines are specified in various planned processes this term should probably be regarded as a placeholder which ought to be defined in a broader ontology, maybe something like IAO?</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">notification deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3286,7 +3293,7 @@ Event committees are usually formed in the planning process of social events, su
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000067"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A paper deadline is a submission deadline that, as part of a call for papers of an academic event, specifies the date until which a contribution to a planned process in form of a paper has to be submitted.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">paper deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3299,7 +3306,7 @@ Event committees are usually formed in the planning process of social events, su
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000067"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A poster deadline is a submission deadline that, as part of a call for papers of an academic event, specifies the date until which a contribution to a planned process in form of a poster has to be submitted.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">poster deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3313,7 +3320,7 @@ Event committees are usually formed in the planning process of social events, su
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">A deadline specification that determines until when a participant (agent) of a planned process has to submit something to someone or somewhere associated with the further processing of this said something.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">Given the fact that submission deadlines are specified in various planned processes this term should probably be regarded as a placeholder which ought to be defined in a broader ontology, maybe something like IAO?</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">submission deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3326,7 +3333,7 @@ Event committees are usually formed in the planning process of social events, su
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000067"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A tutorial deadline is a submission deadline that, as part of a call for papers of an academic event, specifies the date until which a contribution to a planned process in form of a tutorial has to be submitted.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">tutorial deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3339,7 +3346,7 @@ Event committees are usually formed in the planning process of social events, su
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000067"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000123"/>
         <obo:IAO_0000115 xml:lang="en">A workshop deadline is a submission deadline that, as part of a call for papers of an academic event, specifies the date until which a contribution to a planned process in form of a workshop has to be submitted.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <rdfs:label xml:lang="en">workshop deadline</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
@@ -3359,7 +3366,7 @@ Event committees are usually formed in the planning process of social events, su
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/AEON_0000071"/>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">A call for submissions that calls for paper submissions.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <obo:IAO_0000118 xml:lang="en">CFP</obo:IAO_0000118>
         <rdfs:label xml:lang="en">call for papers</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
@@ -3380,8 +3387,8 @@ Event committees are usually formed in the planning process of social events, su
         </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">A call for submissions that calls for abstract submissions.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
-        <rdfs:label xml:lang="de">call for abstracts</rdfs:label>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <rdfs:label xml:lang="en">call for abstracts</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/125"/>
     </owl:Class>
     
@@ -3422,7 +3429,7 @@ Event committees are usually formed in the planning process of social events, su
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000423"/>
         <obo:IAO_0000115 xml:lang="en">An identifier that is a proper name identifying a planned process.</obo:IAO_0000115>
         <obo:IAO_0000116 xml:lang="en">TODO: request term from IAO</obo:IAO_0000116>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-09-13T08:55:02Z</dc:date>
         <rdfs:label xml:lang="en">planned process name</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/132"/>
@@ -4163,7 +4170,7 @@ A congress is a conference that is characterised by a larger number of participa
         </rdfs:subClassOf>
         <obo:IAO_0000115 xml:lang="en">A sociocultural event format that specifies the general set-up and common identity of a series of recurring organized sociocultural events.</obo:IAO_0000115>
         <dc:creator rdf:resource="https://orcid.org/0000-0002-1595-3213"/>
-        <rdfs:label xml:lang="de">event series format</rdfs:label>
+        <rdfs:label xml:lang="en">event series format</rdfs:label>
     </owl:Class>
     
 
@@ -5281,10 +5288,16 @@ This class is only defined as a placeholder in AEON and should actually better b
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000001"/>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000136"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <obo:IAO_0000114 rdf:resource="http://purl.obolibrary.org/obo/IAO_0000125"/>
         <obo:IAO_0000115 xml:lang="en">A publication that is an aggregation of information content entities that are about an academic event, such as its sociocultural event format, its call for contributions, its location, its topics and associated academic field.</obo:IAO_0000115>
         <dc:creator rdf:resource="http://orcid.org/0000-0002-1595-3213"/>
-        <rdfs:label xml:lang="en">academic event description</rdfs:label>
+        <rdfs:label xml:lang="en">sociocultural event description</rdfs:label>
     </owl:Class>
     
 
@@ -5295,7 +5308,7 @@ This class is only defined as a placeholder in AEON and should actually better b
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000030"/>
         <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/AEON_0000226"/>
         <obo:IAO_0000115 xml:lang="en">An event fee specification that, as part of a plan specification, defines the currency and amount of money a person has to pay to attend an event.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-07-05T10:14:06Z</dc:date>
         <rdfs:label xml:lang="en">attendance fee specification</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/117"/>
@@ -5308,7 +5321,7 @@ This class is only defined as a placeholder in AEON and should actually better b
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/AEON_0000226">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000030"/>
         <obo:IAO_0000115 xml:lang="en">An event fee specification that, as part of a plan specification, defines the currency and amount of money a sponsor has to pay to sponsor an event.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
+        <obo:IAO_0000117>https://orcid.org/0000-0002-1595-3213</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2021-07-05T10:15:52Z</dc:date>
         <rdfs:label xml:lang="en">sponsor fee specification</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://github.com/tibonto/aeon/issues/117"/>
@@ -5320,10 +5333,10 @@ This class is only defined as a placeholder in AEON and should actually better b
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/AEON_0000801">
         <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000005"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;An objective specifiaction that describes one of the main goals of a planned process to be the facilitation of education, related communication to intented participants of this planned process.&quot;@en</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
+        <obo:IAO_0000115>&quot;An objective specification that describes the target groups of people for which the event is designed.&quot;@en</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-06T11:20:52Z</dc:date>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">educational audience</rdfs:label>
+        <rdfs:label>event audience</rdfs:label>
     </owl:Class>
     
 
@@ -5349,10 +5362,10 @@ This class is only defined as a placeholder in AEON and should actually better b
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000803"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;An organized sociocultural event that refers to a gathering of teachers, parents, pupils, students (not necessarily academics) in which these people have the chance to present and discuss their work and learn and exchange experience, according to a certain sociocultural format that is specified more or less explicitly in the announcement of the practical event.&quot;@en</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
+        <obo:IAO_0000115>&quot;An organized sociocultural event that refers to a gathering of teachers, parents, pupils, students (not necessarily academics) in which these people have the chance to present and discuss their work and learn and exchange experience, according to a certain sociocultural format that is specified more or less explicitly in the announcement of the practical event.&quot;</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-06T12:42:55Z</dc:date>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">practical event</rdfs:label>
+        <rdfs:label>practical event</rdfs:label>
     </owl:Class>
     
 
@@ -5364,13 +5377,19 @@ This class is only defined as a placeholder in AEON and should actually better b
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000027"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/BFO_0000051"/>
                 <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A sociocultural event format that states that the primary purpose (objective) of an organised sociocultural event is to facilitate a knowledge exchange between the participants of that event within the context of an practical format&quot;</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
+        <obo:IAO_0000115>&quot;A sociocultural event format that states that the primary purpose (objective) of an organised sociocultural event is to facilitate a knowledge exchange between the participants of that event within the context of an practical format&quot;</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-07T16:08:46Z</dc:date>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">practical event format</rdfs:label>
+        <rdfs:label>practical event format</rdfs:label>
     </owl:Class>
     
 
@@ -5378,81 +5397,34 @@ This class is only defined as a placeholder in AEON and should actually better b
     <!-- http://purl.obolibrary.org/obo/AEON_0000804 -->
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/AEON_0000804">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000803"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A practical event format that states that the primary purpose (objective) of an practical event is to facilitate further education among an interested group of participants.&quot;</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/AEON_0000802"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000032"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000128"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000081"/>
+                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000197"/>
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000081"/>
+                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:AEON_0000026>{&quot;wikidata&quot;: {&quot;uri&quot;: &quot;https://www.wikidata.org/wiki/Q15900647&quot;, &quot;label&quot;: &quot;conference_seriesLabel&quot;}, &quot;openresearch&quot;: {&quot;uri&quot;: &quot;https://www.openresearch.org/wiki/Category:Event_series&quot;, &quot;label&quot;: &quot;Event_series&quot;}, &quot;gnd&quot;: {&quot;uri&quot;: &quot;https://d-nb.info/standards/elementset/gnd#SeriesOfConferenceOrEvent&quot;, &quot;label&quot;: &quot;Series of conference or event&quot;}}</obo:AEON_0000026>
+        <obo:IAO_0000115>&quot;A practical event that is the ordered set of all recurring practical events of a distinct identity. This distinct identity is usually demarked by a shared name that only differs with regard to some ordering symbol, such as 1st or the year of the practical event.&quot;</obo:IAO_0000115>
+        <obo:IAO_0000117>https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
         <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-27T12:06:46Z</dc:date>
-        <rdfs:label>practical training format</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/AEON_0000806 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/AEON_0000806">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000803"/>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A practical event format that states that the primary purpose (objective) of an practical event is to facilitate information upon an professional subject to an interested group of participants.&quot;</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-27T12:07:26Z</dc:date>
-        <rdfs:label>information format</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/AEON_0000807 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/AEON_0000807">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/AEON_0000802"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000032"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000804"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000032"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000804"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A practical event that states that the primary purpose (objective) of an practical event is to facilitate training upon a professional subject to an interested group of participants.&quot;</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-27T12:07:26Z</dc:date>
-        <rdfs:label>practical training event</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://purl.obolibrary.org/obo/AEON_0000808 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/AEON_0000808">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/AEON_0000802"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000032"/>
-                        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000806"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000032"/>
-                <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/AEON_0000806"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000115 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;A practical event that states that the primary purpose (objective) of an practical event is inform an interested group of participants upon a professional subject.&quot;</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-27T12:07:26Z</dc:date>
-        <rdfs:label>practical information event</rdfs:label>
+        <rdfs:label>practical event series</rdfs:label>
     </owl:Class>
     
 
@@ -7086,103 +7058,103 @@ This class is only defined as a placeholder in AEON and should actually better b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>administrative area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>administrative division</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>administrative division</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>administrative entity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>boundary region</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>civil area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>district</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>free trade zone</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>governed place</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>leased area (government)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>leased zone (government)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>neutral zone (political)</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>prefecture</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>protectorate</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>sheikdom</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>sultanate</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000004"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>trade zone</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7214,19 +7186,19 @@ This class is only defined as a placeholder in AEON and should actually better b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000005"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>countries, 1st order division</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000005"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>first level subdivision</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000005"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>first-order administrative division</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7269,37 +7241,37 @@ This class is only defined as a placeholder in AEON and should actually better b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>nation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>independent nation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>independent political entity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasNarrowSynonym"/>
         <owl:annotatedTarget>independent sovereign nation</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>country</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000009"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>political entity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7332,37 +7304,37 @@ This class is only defined as a placeholder in AEON and should actually better b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Place or area with clustered or scattered buildings and a permanent human population.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:http://mapping.usgs.gov/www/ti/GNIS/gnis_users_guide_appendixc.html</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:http://mapping.usgs.gov/www/ti/GNIS/gnis_users_guide_appendixc.html</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>place</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>inhabited place</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Getty:TGN</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Getty:TGN</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>populated place</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>populated places</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000062"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasExactSynonym"/>
         <owl:annotatedTarget>settlement</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">USGS:SDTS</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>USGS:SDTS</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7383,13 +7355,13 @@ This class is only defined as a placeholder in AEON and should actually better b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000123"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>A geographical region whose affairs and population are administered by an authority.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">MA:ma</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>MA:ma</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000123"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasRelatedSynonym"/>
         <owl:annotatedTarget>political entity</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Geonames:feature</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>Geonames:feature</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -7419,13 +7391,13 @@ This class is only defined as a placeholder in AEON and should actually better b
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
         <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/IAO_0000115"/>
         <owl:annotatedTarget>Incorporated populated place.</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
         <owl:annotatedProperty rdf:resource="http://www.geneontology.org/formats/oboInOwl#hasBroadSynonym"/>
         <owl:annotatedTarget>urban area</owl:annotatedTarget>
-        <oboInOwl:hasDbXref rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ADL:FTT</oboInOwl:hasDbXref>
+        <oboInOwl:hasDbXref>ADL:FTT</oboInOwl:hasDbXref>
     </owl:Axiom>
     
 
@@ -8358,33 +8330,6 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     
 
 
-    <!-- http://purl.obolibrary.org/obo/AEON:0000805 -->
-
-    <owl:Class rdf:about="http://purl.obolibrary.org/obo/AEON:0000805">
-        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://purl.obolibrary.org/obo/AEON:0000901"/>
-                <owl:someValuesFrom>
-                    <owl:Class>
-                        <owl:unionOf rdf:parseType="Collection">
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000030"/>
-                            <rdf:Description rdf:about="http://purl.obolibrary.org/obo/OBI_0000011"/>
-                        </owl:unionOf>
-                    </owl:Class>
-                </owl:someValuesFrom>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <obo:IAO_0000112 xml:lang="en">DDC 410 Linguistics, OECD 6.02 Languages and literature, ...</obo:IAO_0000112>
-        <obo:IAO_0000115 xml:lang="en">A data item that contextualizes a obi:&apos;planned process&apos; or an iao:&apos;infornation content entity&apos; by providing a reference to a controlled vocalulary that codifies the subdevisions of knowledge taught and researched at an educational organization.</obo:IAO_0000115>
-        <obo:IAO_0000117 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">https://orcid.org/0000-0003-4669-8849</obo:IAO_0000117>
-        <obo:IAO_0000118 xml:lang="en">educational discipline category</obo:IAO_0000118>
-        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2023-03-07T18:04:07Z</dc:date>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">practical field descriptor</rdfs:label>
-    </owl:Class>
-    
-
-
     <!-- http://www.geneontology.org/formats/oboInOwl#ObsoleteClass -->
 
     <owl:Class rdf:about="http://www.geneontology.org/formats/oboInOwl#ObsoleteClass">
@@ -8612,6 +8557,89 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     
 
 
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field_Education -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field_Education">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000027"/>
+        <obo:BFO_0000050 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_format"/>
+        <obo:BFO_0000050 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_format"/>
+        <rdfs:label>Academic_Field:Education</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_1 -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
+        <obo:OBI_0002815 xml:lang="de">Schüler/-innen</obo:OBI_0002815>
+        <obo:IAO_0000115 xml:lang="en">Pupils, students.</obo:IAO_0000115>
+        <rdfs:label>Eventcalendar:Audience_1_1</rdfs:label>
+        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_2 -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
+        <obo:OBI_0002815 xml:lang="de">Lehrer/-innen</obo:OBI_0002815>
+        <obo:IAO_0000115 xml:lang="en">Teachers.</obo:IAO_0000115>
+        <rdfs:label>Eventcalendar:Audience_1_2</rdfs:label>
+        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_3 -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_3">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
+        <obo:OBI_0002815 xml:lang="de">Eltern</obo:OBI_0002815>
+        <obo:IAO_0000115 xml:lang="en">Parents.</obo:IAO_0000115>
+        <rdfs:label>Eventcalendar:Audience_1_3</rdfs:label>
+        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_4 -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_4">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
+        <obo:OBI_0002815 xml:lang="de">Studierende</obo:OBI_0002815>
+        <obo:IAO_0000115 xml:lang="en">Students.</obo:IAO_0000115>
+        <rdfs:label>Eventcalendar:Audience_1_4</rdfs:label>
+        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_5 -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_5">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
+        <obo:OBI_0002815 xml:lang="de">Auszubildende</obo:OBI_0002815>
+        <obo:IAO_0000115 xml:lang="en">Trainee.</obo:IAO_0000115>
+        <rdfs:label>Eventcalendar:Audience_1_5</rdfs:label>
+        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_6 -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_6">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
+        <obo:OBI_0002815 xml:lang="de">Lehrerbildner/-innen</obo:OBI_0002815>
+        <obo:IAO_0000115 xml:lang="en">Teachers educators.</obo:IAO_0000115>
+        <rdfs:label>Eventcalendar:Audience_1_6</rdfs:label>
+        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
+    
+
+
     <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Austria -->
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Austria">
@@ -8627,9 +8655,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000001"/>
         <obo:AEON_0000032 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_format"/>
-        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field/Education"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/8"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/9"/>
+        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field_Education"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_8"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_9"/>
+        <obo:AEON_0000043 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_fee"/>
         <obo:AEON_0000073 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_deadline"/>
         <obo:AEON_0000087 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Berlin"/>
         <obo:AEON_0000088 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Berlin_land"/>
@@ -8643,12 +8672,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:RO_0000057 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_4"/>
         <obo:AEON_0000141 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2022-05-16T12:00:00Z</obo:AEON_0000141>
         <obo:AEON_0000142 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2022-05-18T18:00:00Z</obo:AEON_0000142>
-        <obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de</obo:AEON_0000154>
-        <obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</obo:AEON_0000154>
+        <obo:AEON_0000154>de</obo:AEON_0000154>
+        <obo:AEON_0000154>en</obo:AEON_0000154>
         <obo:AEON_0000164 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://berlindemographydays.org/</obo:AEON_0000164>
-        <obo:AEON_0000952 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">COVID-19; Demografie; Internationale Konferenz; Jugend; Jugendpolitik; Pandemie; Resilienz; Zukunftsperspektive;
-		Krisenresilienz; Demography; Young People; Politics; Crisis; Crisis Resilience; Resilience</obo:AEON_0000952>
-        <obo:AEON_0000953 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weltweit</obo:AEON_0000953>
+        <obo:AEON_0000953>weltweit</obo:AEON_0000953>
         <obo:AEON_0000026 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Germany"/>
         <rdfs:label>Eventcalendar:BDD_Berlin_2022</rdfs:label>
     </owl:NamedIndividual>
@@ -8672,9 +8699,9 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_CfP">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000182"/>
         <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_deadline"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/2"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/3"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_2"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_3"/>
         <obo:AEON_0000216 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://berlindemographydays.org/</obo:AEON_0000216>
         <obo:OBI_0002815 xml:lang="en">BDD Berlin 2022 Call for Proposals is now open!</obo:OBI_0002815>
         <rdfs:label>Eventcalendar:BDD_Berlin_2022_CfP</rdfs:label>
@@ -8706,6 +8733,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000224"/>
         <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_format"/>
         <obo:IAO_0000136 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022"/>
+        <obo:AEON_0000952>COVID-19; Demografie; Internationale Konferenz; Jugend; Jugendpolitik; Pandemie; Resilienz; Zukunftsperspektive;
+        Krisenresilienz; Demography; Young People; Politics; Crisis; Crisis Resilience; Resilience</obo:AEON_0000952>
         <terms:description xml:lang="de">Auf der internationalen Fachkonferenz diskutieren vom 16. bis 18. Mai Expert*innen wie Klaus Hurrelmann und Shireen Jejeebhoi über Perspektiven junger Menschen in Deutschland, Europa und der Welt. Was bewegt junge Menschen, wie kann man sie besser unterstützen und gesellschaftlich und politisch teilhaben lassen, was beeinflusst ihren Lebensverlauf und wie gehen sie mit Krisen wie der Covid-Pandemie um? Vom 16. bis 18. Mai kommen Expert*innen aus Politik, Wissenschaft und Gesellschaft bei den Berliner Demografie-Tagen zusammen, um diese Fragen zu diskutieren. Dabei sprechen die Teilnehmer*innen nicht nur über junge Menschen, sondern auch mit ihnen: An der Paneldiskussion während der Abendveranstaltung nehmen Schüler*innen von Schulen aus Frankreich, Polen, Tschechien, Österreich und Deutschland online und live teil und können sich direkt mit Expert*innen und Politiker*innen austauschen, darunter auch Dubravka Šuica, Vizepräsidentin für Demokratie und Demografie der EU Kommission.Für eine Teilnahme registrieren Sie sich bitte hier: https://berlindemographydays.org/register-now. Eine Simultanübersetzung Englisch-Deutsch steht zur Verfügung. Für die Teilnahme an der Veranstaltung fallen keine Konferenzgebühren an.
 		</terms:description>
         <terms:description xml:lang="en">Under the theme of ‘Younger People’, the topics will include generational fairness and political participation, the consequences of the COVID-19 pandemic and resilience, the importance of the early years of the life course and policy strategies with younger people at their core. What motivates younger people and what are their future prospects in an ageing society? Over 50 international experts from the fields of politics, science and society will discuss with you the topic in the contexts of Germany, Europe and worldwide. The public panel event on Monday, 16 May 2022 from 6 to 8 PM CET (followed by a reception) will be joined by students from seven grade school classes from Europe, Dubravka Šuica, Vice-President of the European Commission for Democracy and Demography, Hermann Gröhe, member of the German parliament (Bundestag), C. Katharina Spieß, Director of the Federal Institute for Population Research and Sabine Walper, Director of the German Youth Institute. The Berlin Demography Days will be held online and in the afternoon, so you can participate from anywhere in the world. The opening event at the WissenschaftsForum Berlin at the Gendarmenmarkt will take place live. The prestigious European Demographer Awards will also be presented at this event. Simultaneous English-German translations will be available. There are no conference fees associated with attending the event.
@@ -8752,7 +8781,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_id">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000003"/>
-        <obo:OBI_0002815 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDD_Berlin_2022</obo:OBI_0002815>
+        <obo:OBI_0002815>BDD_Berlin_2022</obo:OBI_0002815>
         <obo:IAO_0000115>34414</obo:IAO_0000115>
         <rdfs:label>Eventcalendar:BDD_Berlin_2022_id</rdfs:label>
         <prov:wasDerivedFrom>34414</prov:wasDerivedFrom>
@@ -8764,7 +8793,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_name">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000090"/>
-        <obo:AEON_0000091 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">BDD Berlin 2022</obo:AEON_0000091>
+        <obo:AEON_0000091>BDD Berlin 2022</obo:AEON_0000091>
         <rdfs:label>Eventcalendar:BDD_Berlin_2022_name</rdfs:label>
         <skos:altLabel>Berlin Demography Days 2022</skos:altLabel>
         <skos:prefLabel>Berlin Demography Days 2022</skos:prefLabel>
@@ -8800,11 +8829,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_venue">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000025"/>
-        <obo:AEON_0000155 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">10117 Markgrafenstraße 37</obo:AEON_0000155>
+        <obo:AEON_0000155>10117 Markgrafenstraße 37</obo:AEON_0000155>
         <rdfs:label>Eventcalendar:BDD_Berlin_2022_venue</rdfs:label>
         <prov:wasDerivedFrom>https://berlindemographydays.org/</prov:wasDerivedFrom>
     </owl:NamedIndividual>
-    
     
 
 
@@ -8829,7 +8857,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Berlin_land -->
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Berlin_land">
-		<rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000005"/>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000005"/>
         <rdfs:label>Berlin</rdfs:label>
     </owl:NamedIndividual>
     
@@ -8840,12 +8868,12 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000001"/>
         <obo:AEON_0000032 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_format"/>
-        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field/Education"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/4"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/5"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/6"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/7"/>
+        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field_Education"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_4"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_5"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_6"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_7"/>
         <obo:AEON_0000073 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_deadline"/>
         <obo:AEON_0000089 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_venue"/>
         <obo:IAO_0000235 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_id"/>
@@ -8856,11 +8884,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:RO_0000057 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_7"/>
         <obo:AEON_0000141 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2017-11-09T13:00:00Z</obo:AEON_0000141>
         <obo:AEON_0000142 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2017-11-11T12:00:00Z</obo:AEON_0000142>
-        <obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de</obo:AEON_0000154>
-        <obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</obo:AEON_0000154>
+        <obo:AEON_0000154>de</obo:AEON_0000154>
+        <obo:AEON_0000154>en</obo:AEON_0000154>
         <obo:AEON_0000164 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://berlindemographydays.org/</obo:AEON_0000164>
-        <obo:AEON_0000952 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bildung; Bildungspolitik; Familie; Familienpolitik; Forschung; Kind; Migration;</obo:AEON_0000952>
-        <obo:AEON_0000953 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">weltweit</obo:AEON_0000953>
+        <obo:AEON_0000953>weltweit</obo:AEON_0000953>
         <rdfs:label>Eventcalendar:EFF_Wien_2017</rdfs:label>
     </owl:NamedIndividual>
     <owl:Axiom>
@@ -8883,11 +8910,11 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_CfP">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000182"/>
         <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_deadline"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/4"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/5"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/6"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/7"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_4"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_5"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_6"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_7"/>
         <obo:AEON_0000216 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">http://www.oif.ac.at/de/</obo:AEON_0000216>
         <obo:OBI_0002815 xml:lang="en">EFF Wien 2017 Call for Proposals is now open!</obo:OBI_0002815>
         <rdfs:label>Eventcalendar:EFF_Wien_2017_CfP</rdfs:label>
@@ -8919,7 +8946,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000224"/>
         <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_format"/>
         <obo:IAO_0000136 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017"/>
-        <terms:description xml:lang="de">&quot;Zentraler Gedanke der Europäischen Fachkongresse für Familienforschung ist die europaweite Vernetzung der Familienforschung. Themen sind: - Familie - Bildung 
+        <obo:AEON_0000952>Bildung; Bildungspolitik; Familie; Familienpolitik; Forschung; Kind; Migration;</obo:AEON_0000952>
+        <terms:description xml:lang="de">&quot;Zentraler Gedanke der Europäischen Fachkongresse für Familienforschung ist die europaweite Vernetzung der Familienforschung. Themen sind: - Familie - Bildung
 		- Migration&quot;</terms:description>
         <rdfs:label>Eventcalendar:EFF_Wien_2017_description</rdfs:label>
     </owl:NamedIndividual>
@@ -8963,7 +8991,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_id">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000003"/>
-        <obo:OBI_0002815 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFF_Wien_2017</obo:OBI_0002815>
+        <obo:OBI_0002815>EFF_Wien_2017</obo:OBI_0002815>
         <obo:IAO_0000115>28704</obo:IAO_0000115>
         <rdfs:label>Eventcalendar:EFF_Wien_2017_id</rdfs:label>
         <prov:wasDerivedFrom>28704</prov:wasDerivedFrom>
@@ -8975,7 +9003,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_name">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000090"/>
-        <obo:AEON_0000091 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EFF Wien 2017</obo:AEON_0000091>
+        <obo:AEON_0000091>EFF Wien 2017</obo:AEON_0000091>
         <rdfs:label>Eventcalendar:EFF_Wien_2017_name</rdfs:label>
         <skos:altLabel>5. Europäischer Fachkongress für Familienforschung</skos:altLabel>
         <skos:prefLabel>5. Europäischer Fachkongress für Familienforschung</skos:prefLabel>
@@ -9011,7 +9039,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_venue">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000025"/>
-        <obo:AEON_0000155 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">1010 Universitätsring 1, Wien</obo:AEON_0000155>
+        <obo:AEON_0000155>1010 Universitätsring 1, Wien</obo:AEON_0000155>
         <rdfs:label>Eventcalendar:EFF_Wien_2017_venue</rdfs:label>
         <prov:wasDerivedFrom>http://www.oif.ac.at/de/</prov:wasDerivedFrom>
     </owl:NamedIndividual>
@@ -9033,10 +9061,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
         <obo:AEON_0000032 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_format"/>
-        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field/Education"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/2"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/3"/>
+        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field_Education"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_2"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_3"/>
         <obo:AEON_0000087 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:München"/>
         <obo:AEON_0000088 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Bayern_land"/>
         <obo:AEON_0000089 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_venue"/>
@@ -9046,11 +9074,9 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:RO_0000057 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_9"/>
         <obo:AEON_0000141 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-07-08T10:00:00Z</obo:AEON_0000141>
         <obo:AEON_0000142 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-07-08T16:00:00Z</obo:AEON_0000142>
-        <obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de</obo:AEON_0000154>
+        <obo:AEON_0000154>de</obo:AEON_0000154>
         <obo:AEON_0000164 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://weltweiser.de/jugendbildungsmesse-muenchen/</obo:AEON_0000164>
-        <obo:AEON_0000952 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Auslandsaufenthalt; Auslandsstudium; Bildungsmesse; Ehrenamtliche Arbeit; Schüleraustausch; Sprachreise;
-		Au-Pair; Work und Travel; Praktika; Studium im Ausland; Gap Year;</obo:AEON_0000952>
-        <obo:AEON_0000953 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regional</obo:AEON_0000953>
+        <obo:AEON_0000953>regional</obo:AEON_0000953>
         <obo:AEON_0000026 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Germany"/>
         <rdfs:label>Eventcalendar:JuBi_München_2023</rdfs:label>
     </owl:NamedIndividual>
@@ -9073,10 +9099,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_CfP">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000182"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/2"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/3"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/7"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_2"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_3"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_7"/>
         <obo:AEON_0000216 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://weltweiser.de/jugendbildungsmesse-muenchen/</obo:AEON_0000216>
         <obo:OBI_0002815 xml:lang="en">JuBi München 2023 is open!</obo:OBI_0002815>
         <rdfs:label>Eventcalendar:JuBi_München_2023_CfP</rdfs:label>
@@ -9091,6 +9117,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000224"/>
         <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_format"/>
         <obo:IAO_0000136 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023"/>
+        <obo:AEON_0000952>Auslandsaufenthalt; Auslandsstudium; Bildungsmesse; Ehrenamtliche Arbeit; Schüleraustausch; Sprachreise;
+        Au-Pair; Work und Travel; Praktika; Studium im Ausland; Gap Year;</obo:AEON_0000952>
         <terms:description xml:lang="de">Die JugendBildungsmesse JuBi ist bundesweit die größte Spezial-Messe zum Thema Bildung im Ausland. Austauschorganisationen, Veranstalter und Agenturen aus dem gesamten Bundesgebiet informieren auf der JuBi-Tour über alle Facetten von Auslandsaufenthalten und stellen ihre Programme und Stipendienangebote vor, u.a. die WELTBÜRGER-Stipendien. Die Beratung zu Themen wie Schüleraustausch, High School Aufenthalte, Sprachreisen, Au-Pair, Work und Travel, Freiwilligendienste sowie Praktika im Ausland erfolgt persönlich an den Ständen der Aussteller*innen durch Bildungsexpert*innen und ehemalige Programmteilnehmer*innen. Die JuBi ist von 10 bis 16 Uhr für Besucher*innen geöffnet und der Eintritt ist frei!</terms:description>
         <rdfs:label>Eventcalendar:JuBi_München_2023_description</rdfs:label>
     </owl:NamedIndividual>
@@ -9114,21 +9142,20 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_format">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000191"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000803"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000806"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_1"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_3"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_4"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_5"/>
         <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_CfP"/>
         <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_fee"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/1"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/3"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/4"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/5"/>
-        <obo:OBI_0002815 xml:lang="en">Textual description of the format</obo:OBI_0002815>
+        <obo:AEON_0000151>information format</obo:AEON_0000151>
         <rdfs:label>Eventcalendar:JuBi_München_2023_format</rdfs:label>
         <prov:wasDerivedFrom>https://weltweiser.de/jugendbildungsmesse-muenchen/</prov:wasDerivedFrom>
     </owl:NamedIndividual>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_format"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0002815"/>
-        <owl:annotatedTarget xml:lang="en">Textual description of the format</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000151"/>
+        <owl:annotatedTarget>information format</owl:annotatedTarget>
         <prov:wasDerivedFrom>https://weltweiser.de/jugendbildungsmesse-muenchen/</prov:wasDerivedFrom>
     </owl:Axiom>
     
@@ -9138,7 +9165,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_id">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000003"/>
-        <obo:OBI_0002815 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JuBi_München_2023</obo:OBI_0002815>
+        <obo:OBI_0002815>JuBi_München_2023</obo:OBI_0002815>
         <obo:IAO_0000115>34410</obo:IAO_0000115>
         <rdfs:label>Eventcalendar:JuBi_München_2023_id</rdfs:label>
         <prov:wasDerivedFrom>35198</prov:wasDerivedFrom>
@@ -9150,7 +9177,7 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_name">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000090"/>
-        <obo:AEON_0000091 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">JuBi - Die JugendBildungsmesse München 2023</obo:AEON_0000091>
+        <obo:AEON_0000091>JuBi - Die JugendBildungsmesse München 2023</obo:AEON_0000091>
         <rdfs:label>Eventcalendar:JuBi_München_2023_name</rdfs:label>
         <skos:altLabel xml:lang="de">JuBi - Die JugendBildungsmesse München</skos:altLabel>
         <skos:prefLabel>JuBi - Die JugendBildungsmesse München 2022</skos:prefLabel>
@@ -9186,8 +9213,8 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:JuBi_München_2023_venue">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000025"/>
-        <obo:AEON_0000155 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Willi-Graf-Gymnasium</obo:AEON_0000155>
-        <obo:AEON_0000171 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">80804 Borschtallee 26</obo:AEON_0000171>
+        <obo:AEON_0000155>Willi-Graf-Gymnasium</obo:AEON_0000155>
+        <obo:AEON_0000171>80804 Borschtallee 26</obo:AEON_0000171>
         <rdfs:label>Eventcalendar:JuBi_München_2023_venue</rdfs:label>
         <prov:wasDerivedFrom>https://weltweiser.de/jugendbildungsmesse-muenchen/</prov:wasDerivedFrom>
     </owl:NamedIndividual>
@@ -9199,10 +9226,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:KAT_Berlin_2022">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
         <obo:AEON_0000032 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:KAT_Berlin_2022_format"/>
-        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field/Education"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/2"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/3"/>
+        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field_Education"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_2"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_3"/>
         <obo:AEON_0000087 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Berlin"/>
         <obo:AEON_0000088 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Berlin_land"/>
         <obo:IAO_0000235 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:KAT_Berlin_2022_id"/>
@@ -9210,12 +9237,10 @@ This issue is outside the scope of OBI.</obo:IAO_0000116>
         <obo:RO_0000057 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_8"/>
         <obo:AEON_0000141 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2022-05-09T10:00:00Z</obo:AEON_0000141>
         <obo:AEON_0000142 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2022-12-31T23:00:00Z</obo:AEON_0000142>
-        <obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de</obo:AEON_0000154>
-        <obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</obo:AEON_0000154>
+        <obo:AEON_0000154>de</obo:AEON_0000154>
+        <obo:AEON_0000154>en</obo:AEON_0000154>
         <obo:AEON_0000164 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.jmberlin.de/katastrophe-historische-fotos-lesen-workshop-digital</obo:AEON_0000164>
-        <obo:AEON_0000952 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Demokratie; Diktatur; Fotografie; Judentum; Moderne; Nationalsozialismus; Workshop;
-Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
-        <obo:AEON_0000953 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">bundesweit</obo:AEON_0000953>
+        <obo:AEON_0000953>bundesweit</obo:AEON_0000953>
         <obo:AEON_0000026 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Germany"/>
         <rdfs:label>Eventcalendar:KAT_Berlin_2022</rdfs:label>
     </owl:NamedIndividual>
@@ -9240,9 +9265,11 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000224"/>
         <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:KAT_Berlin_2022_format"/>
         <obo:IAO_0000136 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:KAT_Berlin_2022"/>
-        <terms:description xml:lang="en">How did two Jewish photographers view the year 1935? The workshop “Reading Historical Photos” will explore this question. Most photographs taken in Germany between 1933 and 1945 were taken by perpetrators and from perpetrators&apos; perspectives. In this workshop we will focus on the photographs and perspectives of the photographers Fritz Werner Fürstenberg and Herbert Sonnenfeld. Fritz Werner Fürstenberg documented anti-Jewish signs in villages and towns while Herbert Sonnenfeld photographed music and theater performances of the Jewish Cultural Association, Jewish sporting events, and Jewish school life. Thus they both documented Jewish life during this period, but both perspectives react very differently to the situation of exclusion in 1935. The participants will explore how they themselves take photographs and document their everyday life. This forms the basis for the next step, in which the participants examine historical photos using the basics of photo analysis. Historical photographs are often perceived as “objective images” of a historical situation. This workshop will address the pitfalls of a cursory and contextless reading of photographs. We will take a second look at photographs by considering contextual information. Participants? photo-analytical skills will be strengthened practicing comparative seeing.  
+        <obo:AEON_0000952>Demokratie; Diktatur; Fotografie; Judentum; Moderne; Nationalsozialismus; Workshop;
+        Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
+        <terms:description xml:lang="en">How did two Jewish photographers view the year 1935? The workshop “Reading Historical Photos” will explore this question. Most photographs taken in Germany between 1933 and 1945 were taken by perpetrators and from perpetrators&apos; perspectives. In this workshop we will focus on the photographs and perspectives of the photographers Fritz Werner Fürstenberg and Herbert Sonnenfeld. Fritz Werner Fürstenberg documented anti-Jewish signs in villages and towns while Herbert Sonnenfeld photographed music and theater performances of the Jewish Cultural Association, Jewish sporting events, and Jewish school life. Thus they both documented Jewish life during this period, but both perspectives react very differently to the situation of exclusion in 1935. The participants will explore how they themselves take photographs and document their everyday life. This forms the basis for the next step, in which the participants examine historical photos using the basics of photo analysis. Historical photographs are often perceived as “objective images” of a historical situation. This workshop will address the pitfalls of a cursory and contextless reading of photographs. We will take a second look at photographs by considering contextual information. Participants? photo-analytical skills will be strengthened practicing comparative seeing.
 		</terms:description>
-        <terms:description xml:lang="de">Wie schauen zwei jüdische Fotografen auf das Jahr 1935? Dieser Frage wird in dem Workshop „Historische Fotos lesen“ nachgegangen. Die meisten zwischen 1933 und 1945 entstandenen Foto­grafien in Deutsch­land sind von Täter*innen und aus Täter*innen­perspektiven gemacht worden. In diesem Workshop wird der Fokus auf die foto­grafischen Blicke von Fritz Werner Fürsten­berg und Herbert Sonnenfeld gerichtet. Fritz Werner Fürstenberg richtete den Blick seiner Kamera nach außen und dokumentierte antijüdische Schilder in Dörfern und Ortschaften. Herbert Sonnenfeld hingegen fotografierte Musik- und Theater­aufführungen des Jüdischen Kultur­bundes, jüdische Sport­veranstaltungen und jüdischen Schul­alltag. Damit richtete er seinen Blick nach innen und dokumentierte jüdisches Leben in dieser Zeit. Beide Perspektiven reagieren sehr unterschiedlich auf die Ausgrenzungs­situation 1935. Die Teilnehmer*innen setzen sich damit auseinander, wie sie selbst fotografieren und ihren Alltag dokumentieren. Dies ist die Basis für den weiteren Verlauf, in dem historische Fotos anhand eines ABCs der Foto­analyse untersucht werden. In diesem Workshop werden die Fall­stricke eines flüchtigen und kontext­losen Lesens von Fotos thematisiert. Die foto­analytische Kompetenz wird durch Aufgaben zum vergleichenden Sehen gestärkt.  
+        <terms:description xml:lang="de">Wie schauen zwei jüdische Fotografen auf das Jahr 1935? Dieser Frage wird in dem Workshop „Historische Fotos lesen“ nachgegangen. Die meisten zwischen 1933 und 1945 entstandenen Foto­grafien in Deutsch­land sind von Täter*innen und aus Täter*innen­perspektiven gemacht worden. In diesem Workshop wird der Fokus auf die foto­grafischen Blicke von Fritz Werner Fürsten­berg und Herbert Sonnenfeld gerichtet. Fritz Werner Fürstenberg richtete den Blick seiner Kamera nach außen und dokumentierte antijüdische Schilder in Dörfern und Ortschaften. Herbert Sonnenfeld hingegen fotografierte Musik- und Theater­aufführungen des Jüdischen Kultur­bundes, jüdische Sport­veranstaltungen und jüdischen Schul­alltag. Damit richtete er seinen Blick nach innen und dokumentierte jüdisches Leben in dieser Zeit. Beide Perspektiven reagieren sehr unterschiedlich auf die Ausgrenzungs­situation 1935. Die Teilnehmer*innen setzen sich damit auseinander, wie sie selbst fotografieren und ihren Alltag dokumentieren. Dies ist die Basis für den weiteren Verlauf, in dem historische Fotos anhand eines ABCs der Foto­analyse untersucht werden. In diesem Workshop werden die Fall­stricke eines flüchtigen und kontext­losen Lesens von Fotos thematisiert. Die foto­analytische Kompetenz wird durch Aufgaben zum vergleichenden Sehen gestärkt.
 		</terms:description>
         <rdfs:label>Eventcalendar:KAT_Berlin_2022_description</rdfs:label>
     </owl:NamedIndividual>
@@ -9255,8 +9282,8 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000108"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000190"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000803"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/1"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/2"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_1"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_2"/>
         <obo:OBI_0002815 xml:lang="en">Textual description of the format</obo:OBI_0002815>
         <rdfs:label>Eventcalendar:KAT_Berlin_2022_format</rdfs:label>
         <prov:wasDerivedFrom>https://www.jmberlin.de/katastrophe-historische-fotos-lesen-workshop-digital</prov:wasDerivedFrom>
@@ -9274,7 +9301,7 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:KAT_Berlin_2022_id">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000003"/>
-        <obo:OBI_0002815 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KAT_Berlin_2022</obo:OBI_0002815>
+        <obo:OBI_0002815>KAT_Berlin_2022</obo:OBI_0002815>
         <obo:IAO_0000115>34410</obo:IAO_0000115>
         <rdfs:label>Eventcalendar:KAT_Berlin_2022_id</rdfs:label>
         <prov:wasDerivedFrom>34410</prov:wasDerivedFrom>
@@ -9286,74 +9313,42 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:KAT_Berlin_2022_name">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000090"/>
-        <obo:AEON_0000091 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">KAT Berlin 2022</obo:AEON_0000091>
+        <obo:AEON_0000091>KAT Berlin 2022</obo:AEON_0000091>
         <rdfs:label>Eventcalendar:KAT_Berlin_2022_name</rdfs:label>
         <skos:altLabel xml:lang="en">Catastrophe. Reading Historical Photos - Digital Workshop for grades 9 to 13 as well as for adults.</skos:altLabel>
         <skos:altLabel xml:lang="de">Katastrophe. Historische Fotos lesen - Digitaler Workshop für Schulklassen der Stufen 9 bis 13 sowie für Erwachsenen­gruppen</skos:altLabel>
         <skos:prefLabel>Berlin Reading Historical Photos 2022</skos:prefLabel>
     </owl:NamedIndividual>
-	
-	<!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_id -->
+    
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_id">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000003"/>
-        <obo:OBI_0002815 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nachhaltig_konsumieren_2023</obo:OBI_0002815>
-        <obo:IAO_0000115>35211</obo:IAO_0000115>
-        <rdfs:label>Eventcalendar:Nachhaltig_konsumieren_2023_id</rdfs:label>
-        <prov:wasDerivedFrom>35211</prov:wasDerivedFrom>
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:München -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:München">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
+        <rdfs:label>München</rdfs:label>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_name -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_name">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000090"/>
-        <obo:AEON_0000091 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Nachhaltig konsumieren aber wie?</obo:AEON_0000091>
-        <rdfs:label>Eventcalendar:Nachhaltig_konsumieren_2023_name</rdfs:label>
-        <skos:altLabel xml:lang="de">Nachhaltig konsumieren aber wie?</skos:altLabel>
-		<skos:prefLabel>Nachhaltig konsumieren aber wie?</skos:prefLabel>
-    </owl:NamedIndividual>
-	
-	<!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_description -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_description">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000224"/>
-        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_format"/>
-        <obo:IAO_0000136 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023"/>
-        <terms:description xml:lang="de">Wer als Lehrkraft das Themenfeld Konsum und Nachhaltigkeit im Unterricht bearbeiten möchte, merkt schnell, wie komplex der Bereich ist. Und nicht immer erschließen sich Zusammenhänge zwischen einzelnen Unterthemen auf den ersten Blick. Auch kritische Fragen wie die nach der Konsumfreiheit des einzelnen oder Glaubenssätze wie „Das bringt ja alles eh nichts“ lassen sich nicht immer so leicht entkräften. Mit dem Bildungsportal „Denkwerkstatt Konsum“ will das Umweltbundesamt (UBA) Pädagog:innen und andere Mulitplikator:innen Unterstützung bieten.
-		</terms:description>
-        <!--<terms:description xml:lang="en">How did two Jewish photographers view the year 1935? The workshop “Reading Historical Photos” will explore this question. Most photographs taken in Germany between 1933 and 1945 were taken by perpetrators and from perpetrators' perspectives. In this workshop we will focus on the photographs and perspectives of the photographers Fritz Werner Fürstenberg and Herbert Sonnenfeld. Fritz Werner Fürstenberg documented anti-Jewish signs in villages and towns while Herbert Sonnenfeld photographed music and theater performances of the Jewish Cultural Association, Jewish sporting events, and Jewish school life. Thus they both documented Jewish life during this period, but both perspectives react very differently to the situation of exclusion in 1935. The participants will explore how they themselves take photographs and document their everyday life. This forms the basis for the next step, in which the participants examine historical photos using the basics of photo analysis. Historical photographs are often perceived as “objective images” of a historical situation. This workshop will address the pitfalls of a cursory and contextless reading of photographs. We will take a second look at photographs by considering contextual information. Participants? photo-analytical skills will be strengthened practicing comparative seeing.  
-		</terms:description>-->
-        <rdfs:label>Eventcalendar:Nachhaltig_konsumieren_2023_description</rdfs:label>
-    </owl:NamedIndividual>
-	
-	<!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023 -->
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000802"/>
         <obo:AEON_0000032 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_format"/>
-        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field/Education"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/6"/>
-        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/4"/>
-        <!--<obo:AEON_0000087 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:München"/>
-        <obo:AEON_0000088 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Bayern"/>
-		<obo:AEON_0000089 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_venue"/>
-        <obo:AEON_0000073 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_deadline"/>
-		<obo:RO_0000057 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_orga_committee"/>-->
+        <obo:AEON_0000040 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field_Education"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_4"/>
+        <obo:AEON_0000041 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_6"/>
+        <obo:IAO_0000235 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_description"/>
         <obo:IAO_0000235 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_id"/>
         <obo:IAO_0000235 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_name"/>
-		<obo:IAO_0000235 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_description"/>
         <obo:RO_0000057 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_10"/>
         <obo:AEON_0000141 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-03-21T16:00:00Z</obo:AEON_0000141>
         <obo:AEON_0000142 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTimeStamp">2023-03-21T17:30:00Z</obo:AEON_0000142>
-        <obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">de</obo:AEON_0000154>
-		<!--<obo:AEON_0000154 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">en</obo:AEON_0000154>-->
-		<obo:AEON_0000952 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Fortbildung; Klima; Konsum; Nachhaltigkeit; Umwelt; Umweltbewusstsein;
-		Verbraucherbildung; Nachhaltiger Konsum; Lehrkräfte;</obo:AEON_0000952>
-		<obo:AEON_0000953 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">regional</obo:AEON_0000953>
+        <obo:AEON_0000154>de</obo:AEON_0000154>
         <obo:AEON_0000164 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://www.verbraucherbildung.de/online-fortbildung/nachhaltig-konsumieren-aber-wie</obo:AEON_0000164>
+        <obo:AEON_0000953>regional</obo:AEON_0000953>
         <obo:AEON_0000026 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Germany"/>
         <rdfs:label>Eventcalendar:Nachhaltig_konsumieren_2023</rdfs:label>
     </owl:NamedIndividual>
@@ -9370,37 +9365,64 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
         <prov:wasDerivedFrom>https://weltweiser.de/jugendbildungsmesse-muenchen/</prov:wasDerivedFrom>
     </owl:Axiom>
     
-     <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_format -->
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_description -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_description">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000224"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_format"/>
+        <obo:IAO_0000136 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023"/>
+        <obo:AEON_0000952>Fortbildung; Klima; Konsum; Nachhaltigkeit; Umwelt; Umweltbewusstsein;
+        Verbraucherbildung; Nachhaltiger Konsum; Lehrkräfte;</obo:AEON_0000952>
+        <terms:description xml:lang="de">Wer als Lehrkraft das Themenfeld Konsum und Nachhaltigkeit im Unterricht bearbeiten möchte, merkt schnell, wie komplex der Bereich ist. Und nicht immer erschließen sich Zusammenhänge zwischen einzelnen Unterthemen auf den ersten Blick. Auch kritische Fragen wie die nach der Konsumfreiheit des einzelnen oder Glaubenssätze wie „Das bringt ja alles eh nichts“ lassen sich nicht immer so leicht entkräften. Mit dem Bildungsportal „Denkwerkstatt Konsum“ will das Umweltbundesamt (UBA) Pädagog:innen und andere Mulitplikator:innen Unterstützung bieten.
+		</terms:description>
+        <rdfs:label>Eventcalendar:Nachhaltig_konsumieren_2023_description</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_format -->
 
     <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_format">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000803"/>
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000804"/>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000190"/>
-        <!--<obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_CfP"/>
-		<obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_fee"/>-->
-		<obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/2"/>
-		<obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/4"/>
-		<obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/6"/>
-        <obo:OBI_0002815 xml:lang="en">Textual description of the format</obo:OBI_0002815>
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000803"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_2"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_4"/>
+        <obo:BFO_0000051 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1_6"/>
+        <obo:AEON_0000151>practical training format</obo:AEON_0000151>
         <rdfs:label>Eventcalendar:Nachhaltig_konsumieren_2023_format</rdfs:label>
         <prov:wasDerivedFrom>https://www.verbraucherbildung.de/online-fortbildung/nachhaltig-konsumieren-aber-wie</prov:wasDerivedFrom>
     </owl:NamedIndividual>
     <owl:Axiom>
         <owl:annotatedSource rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_format"/>
-        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/OBI_0002815"/>
-        <owl:annotatedTarget xml:lang="en">Textual description of the format</owl:annotatedTarget>
+        <owl:annotatedProperty rdf:resource="http://purl.obolibrary.org/obo/AEON_0000151"/>
+        <owl:annotatedTarget>practical training format</owl:annotatedTarget>
         <prov:wasDerivedFrom>https://www.verbraucherbildung.de/online-fortbildung/nachhaltig-konsumieren-aber-wie</prov:wasDerivedFrom>
     </owl:Axiom>
     
 
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_id -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_id">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000003"/>
+        <obo:OBI_0002815>Nachhaltig_konsumieren_2023</obo:OBI_0002815>
+        <obo:IAO_0000115>35211</obo:IAO_0000115>
+        <rdfs:label>Eventcalendar:Nachhaltig_konsumieren_2023_id</rdfs:label>
+        <prov:wasDerivedFrom>35211</prov:wasDerivedFrom>
+    </owl:NamedIndividual>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:München -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_name -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:München">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ENVO_00000856"/>
-        <rdfs:label>München</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Nachhaltig_konsumieren_2023_name">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000090"/>
+        <obo:AEON_0000091>Nachhaltig konsumieren aber wie?</obo:AEON_0000091>
+        <rdfs:label>Eventcalendar:Nachhaltig_konsumieren_2023_name</rdfs:label>
+        <skos:altLabel xml:lang="de">Nachhaltig konsumieren aber wie?</skos:altLabel>
+        <skos:prefLabel>Nachhaltig konsumieren aber wie?</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -9411,6 +9433,17 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ICO_0000049"/>
         <rdfs:label>_Organization:Diakonie Deutschland und Population Europe</rdfs:label>
         <skos:prefLabel>Diakonie Deutschland und Population Europe, das Netzwerk führender europäischer Forschungseinrichtungen im Bereich der Bevölkerungswissenschaften</skos:prefLabel>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_10 -->
+
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_10">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ICO_0000049"/>
+        <obo:AEON_0000144 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">mailto:verbraucherschule@vzbv.de</obo:AEON_0000144>
+        <rdfs:label>_Organization:Verbraucherzentrale Bundesverband (vzbv)</rdfs:label>
+        <skos:prefLabel>Verbraucherzentrale Bundesverband (vzbv)</skos:prefLabel>
     </owl:NamedIndividual>
     
 
@@ -9492,115 +9525,32 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
         <rdfs:label>_Organization:weltweiser – Der unabhängige Bildungsberatungsdienst</rdfs:label>
         <skos:prefLabel>weltweiser – Der unabhängige Bildungsberatungsdienst</skos:prefLabel>
     </owl:NamedIndividual>
-	
-	<!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_10 -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Organization_10">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/ICO_0000049"/>
-		<obo:AEON_0000144 rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">mailto:verbraucherschule@vzbv.de</obo:AEON_0000144>
-        <rdfs:label>_Organization:Verbraucherzentrale Bundesverband (vzbv)</rdfs:label>
-        <skos:prefLabel>Verbraucherzentrale Bundesverband (vzbv)</skos:prefLabel>
-    </owl:NamedIndividual>
     
 
 
     <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Person_1 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Person_1"/>
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Person_1">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:label>Eventcalendar:Person_1</rdfs:label>
+        <skos:altLabel>Person 1</skos:altLabel>
+    </owl:NamedIndividual>
     
 
 
     <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Person_2 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Person_2"/>
-    
-
-
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field/Education -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Academic_Field/Education">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000027"/>
-        <obo:BFO_0000050 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:BDD_Berlin_2022_format"/>
-        <obo:BFO_0000050 rdf:resource="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:EFF_Wien_2017_format"/>
-        <rdfs:label>Academic_Field:Education</rdfs:label>
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Person_2">
+        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/NCBITaxon_9606"/>
+        <rdfs:label>Eventcalendar:Person_2</rdfs:label>
+        <skos:altLabel>Person 2</skos:altLabel>
     </owl:NamedIndividual>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/1 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/1">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
-        <obo:OBI_0002815 xml:lang="de">Schüler/-innen</obo:OBI_0002815>
-        <obo:IAO_0000115 xml:lang="en">Pupils, students.</obo:IAO_0000115>
-        <rdfs:label>Eventcalendar:Audience_1/1</rdfs:label>
-        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/2 -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/2">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
-        <obo:OBI_0002815 xml:lang="de">Lehrer/-innen</obo:OBI_0002815>
-        <obo:IAO_0000115 xml:lang="en">Teachers.</obo:IAO_0000115>
-        <rdfs:label>Eventcalendar:Audience_1/2</rdfs:label>
-        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/3 -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/3">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
-        <obo:OBI_0002815 xml:lang="de">Eltern</obo:OBI_0002815>
-        <obo:IAO_0000115 xml:lang="en">Parents.</obo:IAO_0000115>
-        <rdfs:label>Eventcalendar:Audience_1/3</rdfs:label>
-        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/4 -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/4">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
-        <obo:OBI_0002815 xml:lang="de">Studierende</obo:OBI_0002815>
-        <obo:IAO_0000115 xml:lang="en">Students.</obo:IAO_0000115>
-        <rdfs:label>Eventcalendar:Audience_1/4</rdfs:label>
-        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/5 -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/5">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
-        <obo:OBI_0002815 xml:lang="de">Auszubildende</obo:OBI_0002815>
-        <obo:IAO_0000115 xml:lang="en">Trainee.</obo:IAO_0000115>
-        <rdfs:label>Eventcalendar:Audience_1/5</rdfs:label>
-        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
-    </owl:NamedIndividual>
-	
-	<!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/6 -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Audience_1/6">
-        <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000801"/>
-        <obo:OBI_0002815 xml:lang="de">Lehrerbildner/-innen</obo:OBI_0002815>
-        <obo:IAO_0000115 xml:lang="en">Teachers educators.</obo:IAO_0000115>
-        <rdfs:label>Eventcalendar:Audience_1/6</rdfs:label>
-        <prov:wasDerivedFrom>Event database</prov:wasDerivedFrom>
-    </owl:NamedIndividual>
-	
-    
-
-
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1 -->
-
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/1">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_1">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Sekundarstufe II</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with upper secondary school.</obo:IAO_0000115>
@@ -9610,9 +9560,9 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/2 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_2 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/2">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_2">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Jugendbildung</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with youth education.</obo:IAO_0000115>
@@ -9622,9 +9572,9 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/3 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_3 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/3">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_3">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Erwachsenenbildung/Weiterbildung</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with adult education/further education.</obo:IAO_0000115>
@@ -9634,9 +9584,9 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/4 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_4 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/4">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_4">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Allgemeinbildung</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with general education.</obo:IAO_0000115>
@@ -9646,9 +9596,9 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/5 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_5 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/5">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_5">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Primarstufe</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with primary school.</obo:IAO_0000115>
@@ -9658,9 +9608,9 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/6 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_6 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/6">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_6">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Sekundarstufe I</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with lower secondary school level.</obo:IAO_0000115>
@@ -9670,9 +9620,9 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/7 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_7 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/7">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_7">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Berufliche Bildung</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with vocational training.</obo:IAO_0000115>
@@ -9682,9 +9632,9 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/8 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_8 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/8">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_8">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Wissenschaft/Bildungsforschung</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with scientific and educational training.</obo:IAO_0000115>
@@ -9694,9 +9644,9 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     
 
 
-    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/9 -->
+    <!-- https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_9 -->
 
-    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1/9">
+    <owl:NamedIndividual rdf:about="https://eventcalendar.semantic-cora.org/index.php/Eventcalendar:Topic_1_9">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000028"/>
         <obo:OBI_0002815 xml:lang="de">Bildungspolitik/Bildungsverwaltung</obo:OBI_0002815>
         <obo:IAO_0000115 xml:lang="en">Deals with Education Policy or Educational Administration.</obo:IAO_0000115>
@@ -9709,6 +9659,7 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     <!-- https://orcid.org/0000-0001-8249-1752 -->
 
     <owl:NamedIndividual rdf:about="https://orcid.org/0000-0001-8249-1752">
+        <rdfs:comment>ORCID of Ludo Waltman</rdfs:comment>
         <rdfs:label>ORCID:0000-0001-8249-1752</rdfs:label>
     </owl:NamedIndividual>
     
@@ -9717,10 +9668,8 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     <!-- https://orcid.org/0000-0002-1595-3213 -->
 
     <owl:NamedIndividual rdf:about="https://orcid.org/0000-0002-1595-3213">
-        <rdfs:comment>ORCID of Cornelia Veja</rdfs:comment>
         <rdfs:comment>ORCID of Philip Strömert</rdfs:comment>
         <rdfs:label>ORCID:0000-0002-1595-3213</rdfs:label>
-        <rdfs:label>ORCID:0000-0003-4669-8849</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -9728,7 +9677,17 @@ Geschichte; Jüdisches Leben in Deutschland; Berlin;</obo:AEON_0000952>
     <!-- https://orcid.org/0000-0003-2499-7741 -->
 
     <owl:NamedIndividual rdf:about="https://orcid.org/0000-0003-2499-7741">
+        <rdfs:comment>ORCID of Christian Hauschke</rdfs:comment>
         <rdfs:label>ORCID:0000-0003-2499-7741</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://orcid.org/0000-0003-4669-8849 -->
+
+    <owl:NamedIndividual rdf:about="https://orcid.org/0000-0003-4669-8849">
+        <rdfs:comment>ORCID of Cornelia Veja</rdfs:comment>
+        <rdfs:label>ORCID:0000-0003-4669-8849</rdfs:label>
     </owl:NamedIndividual>
     
 
@@ -9911,7 +9870,7 @@ Do you help make scholarly data open, found, and consumed? Do you have fresh ide
 
     <owl:NamedIndividual rdf:about="https://www.confident-conference.org/index.php/Event:VIVO_2021_id">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000003"/>
-        <obo:OBI_0002815 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIVO_2020</obo:OBI_0002815>
+        <obo:OBI_0002815>VIVO_2020</obo:OBI_0002815>
         <obo:IAO_0000115>An example academic event internal ID.</obo:IAO_0000115>
         <rdfs:label>Event:VIVO_2021_id</rdfs:label>
     </owl:NamedIndividual>
@@ -9922,7 +9881,7 @@ Do you help make scholarly data open, found, and consumed? Do you have fresh ide
 
     <owl:NamedIndividual rdf:about="https://www.confident-conference.org/index.php/Event:VIVO_2021_name">
         <rdf:type rdf:resource="http://purl.obolibrary.org/obo/AEON_0000090"/>
-        <obo:AEON_0000091 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">VIVO 2021</obo:AEON_0000091>
+        <obo:AEON_0000091>VIVO 2021</obo:AEON_0000091>
         <rdfs:label>Event:VIVO_2021_name</rdfs:label>
         <skos:altLabel>12th Annual VIVO Conference 2021</skos:altLabel>
         <skos:prefLabel>12th International VIVO Conference 2021</skos:prefLabel>
@@ -10404,5 +10363,5 @@ Do you help make scholarly data open, found, and consumed? Do you have fresh ide
 
 
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi -->
 
