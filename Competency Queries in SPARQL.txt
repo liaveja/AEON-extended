@@ -1,0 +1,179 @@
+##CQ1. What are the event topics and targeted audience for professional (practical) meetings in a period?
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?s ?label ?audience_text ?startdate where { 
+	?s rdf:type obo:AEON_0000196 ;
+                   obo:AEON_0000142 ?startdate;
+                   obo:AEON_0000041 ?topic.
+   	 ?topic obo:OBI_0002815 ?label.
+     	?s obo:AEON_0000032 ?format.
+    	?format obo:BFO_0000051 ?audience.
+    	?audience rdf:type obo:AEON_0000801;
+             	 obo:OBI_0002815 ?audience_text.
+FILTER("2023-01-01"^^xsd:dateTimeStamp <= ?startdate 
+        && ?startdate < "2023-07-01"^^xsd:dateTimeStamp)
+} limit 100
+
+##CQ2. What are the meetings interesting for a certain group of interest?
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?s  ?group where { 
+	?s rdf:type obo:AEON_0000802 ;
+          obo:AEON_0000954 ?group.
+} limit 100 
+
+##CQ3. What is the geographical coverage for professional meetings for a certain audience?
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+select ?s ?format ?audience_text ?geog where { 
+	?s rdf:type obo:AEON_0000802 ;
+       obo:AEON_0000953 ?geog.
+     ?s obo:AEON_0000032 ?format.
+     ?format obo:BFO_0000051 ?audience.
+    ?audience rdf:type obo:AEON_0000801;
+             	 obo:OBI_0002815 ?audience_text.
+     filter contains(?audience_text,"Studierende") 
+} limit 100 
+
+##CQ4. What professional meeting is available in my region, such as an exhibition or a learning session?
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?s  ?province ?info where { 
+	?s rdf:type obo:AEON_0000802 ;
+       obo:AEON_0000088 ?province.
+    ?province rdfs:label 'Hessen'.
+    ?s obo:AEON_0000032 ?format.
+    ?format obo:AEON_0000151 ?info.
+    filter (CONTAINS (?info, "exhibition") || CONTAINS(?info, "information format"))
+             
+} limit 100 
+
+##CQ5. When and where is the meeting scheduled?
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select ?s  ?l1 ?l2 ?acronym ?startdate ?enddate where { 
+	?s rdf:type obo:AEON_0000196 ;
+                   obo:AEON_0000142 ?startdate;
+                    obo:AEON_0000141 ?enddate;
+                    obo:IAO_0000235 ?name;
+       obo:AEON_0000088 ?province;
+       obo:AEON_0000087 ?city.
+    ?province rdfs:label ?l1.
+    ?city rdfs:label ?l2.
+    ?name rdf:type obo:AEON_0000090;
+              skos:altLabel ?acronym.
+    filter contains(?acronym,"JuBi - Die JugendBildungsmesse München") 
+    
+} limit 100 
+
+##CQ6. Who were the local organizers? 
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+select * where { 
+	?s rdf:type obo:AEON_0000196 ;
+       obo:RO_0000057 ?organizer.
+    ?organizer rdf:type obo:OBI_0000245 .
+    MINUS{?organizer rdf:type obo:OOSTT_00000114.}
+    ?organizer skos:prefLabel ?labelorg .
+      
+} limit 100 
+
+##CQ7. Was an event part of a series? 
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+select ?s  ?series ?label ?description where { 
+    ?s rdf:type obo:AEON_0000196 ;
+		obo:AEON_0000084 ?series.
+    ?series rdfs:label ?label;
+            dcterms:description ?description.
+    
+} limit 100
+
+##CQ8. Who is responsible for the series?
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select * where { 
+	?s rdf:type obo:AEON_0000196 ;
+          obo:AEON_0000032 ?format.
+    ?format rdf:type obo:AEON_0000128;
+            rdfs:label ?label.
+    
+    OPTIONAL{?s obo:RO_0000057 ?organizer.
+    ?organizer rdf:type obo:OBI_0000245 .
+    MINUS{?organizer rdf:type obo:OOSTT_00000114.}
+        ?organizer skos:prefLabel ?labelorg .	}
+     	
+} limit 100
+
+##CQ9. Is the event affordable, and does one have to travel and where? 
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select * where { 
+	?s rdf:type obo:AEON_0000196 ;
+    obo:IAO_0000235 ?name;
+    obo:AEON_0000088 ?province;
+       obo:AEON_0000087 ?city;
+          obo:AEON_0000032 ?format.
+    ?format obo:BFO_0000051 ?fee.
+    ?fee rdf:type obo:AEON_0000225;
+    	obo:AEON_0000153 ?value.
+    
+    ?province rdfs:label ?l1.
+    ?city rdfs:label ?l2.
+    ?name rdf:type obo:AEON_0000090;
+              skos:altLabel ?acronym.
+    filter contains(?acronym,"JuBi - Die JugendBildungsmesse München") 
+     	
+} limit 100
+
+##CQ10. When is the deadline for the call for papers?
+PREFIX obo: <http://purl.obolibrary.org/obo/> 
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+select * where { 
+    ?s rdf:type obo:AEON_0000196 ;
+        obo:AEON_0000032 ?format.
+       ?format obo:BFO_0000051 ?cfp.
+    ?cfp rdf:type obo:AEON_0000182.
+    ?cfp obo:BFO_0000051 ?deadline.
+    ?deadline obo:AEON_0000074 ?d.
+    } limit 100
+
+##CQ11. Who is on the organizing committee?
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+select * where { 
+	?s rdf:type obo:AEON_0000001 ;
+       obo:RO_0000057 ?organizer.
+    ?organizer rdf:type obo:AEON_0000042 ;
+   				obo:RO_0002351 ?person.
+    ?person skos:altLabel ?label.
+   
+      
+} limit 100 
+
